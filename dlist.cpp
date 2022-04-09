@@ -42,14 +42,14 @@ void dlist::display() {
 }
 
 void dlist::remove(int th){
-  if(p->next == NULL){
-    if(p->data > th){
-      p->previous = p-> next;
+  if(current->next == NULL){
+    if(current->data > th){
+      current->previous = current-> next;
     }
     return;
   }
-  remove(p->next, th);
-  if(p->data > th){
-      p->previous = p-> next;
+  remove(current->next, th);
+  if(current->data > th){
+      current->previous = current-> next;
     }
 }
