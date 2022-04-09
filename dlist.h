@@ -21,7 +21,7 @@ class dlist
         ~dlist();        //supplied
         void build();   //supplied
         void display(); //supplied
-        void remove(int th);
+        void remove(struct node* &current, int th;
         
 
      /* *****************YOUR TURN! ******************************** */
