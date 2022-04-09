@@ -41,7 +41,7 @@ void dlist::display() {
   cout << endl;
 }
 
-void dlist::remove(struct node* p, int th){
+void dlist::remove(int th){
   if(p->next == NULL){
     if(p->data > th){
       p->previous = p-> next;
