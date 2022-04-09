@@ -48,7 +48,7 @@ void dlist::remove(int th){
     }
     return;
   }
-  remove(head->next, th);
+  remove(th);
   if(head->data > th){
       head->previous = head-> next;
     }
