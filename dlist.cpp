@@ -56,7 +56,9 @@ void dlist::remove(node* &head, node* current, int th){
         cout<<"head"<<endl;
         head = current -> next;
       }
-      current->previous->next= current-> next;
+      else{
+        current->previous->next= current-> next;
+      }
     }
 }
 
