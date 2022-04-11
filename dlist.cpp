@@ -56,7 +56,7 @@ void dlist::remove(node* &head, node* current, int th){
       if(current -> next== NULL){
         cout<< "tail: "  << current-> data <<endl;
       }
-      else if(current -> previous == NULL){
+      else if(current -> previous -> data == NULL){
         cout<< "head: "  << current-> data <<endl;
       }
       else{
