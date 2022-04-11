@@ -63,9 +63,11 @@ void dlist::remove2(node* current, int th){
       head->previous = NULL;
       current = head;
   }
-  else (current->data >= th){
+  else {
+    if(current->data >= th){
     cout << "over 5: " << current-> data << endl;
       current->previous->next= current-> next;
+    }
   }
 }
 
