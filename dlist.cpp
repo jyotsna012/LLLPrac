@@ -42,7 +42,7 @@ void dlist::display() {
 }
 
 void dlist::remove(node* &head, node* current, int th){
-  a++;
+
   cout << current->data << endl;
   if(current->next == NULL){
     if(current->data > th){
