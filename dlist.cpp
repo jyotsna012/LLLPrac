@@ -51,15 +51,12 @@ void dlist::remove(node* &head, node* current, int th, int &a){
     return;
   }
   current = current -> next;
-  remove(head, current, th, a);
-  a--;
+  remove(head, current, th);
   if(current->data >= th){
     cout << "over 5: " << current-> data << endl;
       if(current -> next== NULL){
         cout<< "tail: "  << current-> data <<endl;
-      }
-      else if(a == 1){
-        cout<< "head: "  << current-> data <<endl;
+        current -> previous -> next == NULL;
       }
       else{
         current->previous->next= current-> next;
