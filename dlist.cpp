@@ -60,6 +60,7 @@ void dlist::remove(node* &head, node* current, int th){
       }
       else{
         current->previous->next= current-> next;
+        free(current);
       }
     }
 }
