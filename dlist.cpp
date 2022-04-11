@@ -41,17 +41,21 @@ void dlist::display() {
   cout << endl;
 }
 
-void dlist::remove2(node* &head, node* current, int th){
+void dlist::remove2(node* current, int th){
 
   cout << current->data << endl;
   if(current->next == NULL){
     if(current->data >= th){
-      current->previous -> next = NULL;
+	      node* temp = current;
+	      node* pre = current->previous;
+	      pre->next = NULL;
+	      tail = pre;
+	      delete temp;
     }
     return;
   }
   current = current -> next;
-  remove2(head, current, th);
+  remove2(current, th);
   if(head->data >= th){
       node* temp = head;
       head = head->next;
