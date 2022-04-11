@@ -42,33 +42,9 @@ void dlist::display() {
 }
 
 void dlist::remove2(node* current, int th){
-
-  cout << current->data << endl;
-  if(current->next == NULL){
-    if(current->data >= th){
-	      node* temp = current;
-	      node* pre = current->previous;
-	      pre->next = NULL;
-	      tail = pre;
-	      delete temp;
-    }
-    return;
-  }
-  current = current -> next;
-  remove2(current, th);
-  if(head->data >= th){
-      node* temp = head;
-      head = head->next;
-      delete temp;
-      head->previous = NULL;
-      current = head;
-  }
-  else {
-    if(current->data >= th){
-    cout << "over 5: " << current-> data << endl;
-      current->previous->next= current-> next;
-    }
-  }
+     if(current == head){
+     	cout << "hi" << endl;
+     }
 }
 
 
