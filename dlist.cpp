@@ -55,14 +55,7 @@ void dlist::remove2(node* current, int th){
 	if(current != head && current != tail){
 	current = current -> next;
      	remove2(current, th);
-     }
-     if(current == tail){
-	cout << "end" << endl;
-     	node* temp = tail;
-	node* prev = tail -> previous;
-	prev -> next = NULL;
-	delete temp;
-     }
+}
 
 }
 
