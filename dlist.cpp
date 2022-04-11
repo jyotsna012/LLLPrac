@@ -7,9 +7,11 @@ dlist::dlist() {
 
 dlist::~dlist() {
   while (head != NULL) {
-    node* temp = head;
-    head = head->next;
-    delete temp;
+      node* temp = head;
+      head = head->next;
+      delete temp;
+      head->previous = NULL;
+      current = head;
   }
 }
 
