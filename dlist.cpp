@@ -52,9 +52,6 @@ void dlist::remove(node* current, int th){
   current = current -> next;
   remove(current, th);
   if(current->data > th){
-      cout << "hi " << current -> data << endl;
-      cout << "prev: " << current->previous->data<< endl;
-      cout << "next: " << current->next->data<< endl;
       current->previous = current-> next;
     }
 }
