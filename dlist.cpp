@@ -52,7 +52,7 @@ void dlist::remove(node* &head, node* current, int th){
   }
   current = current -> next;
   remove(head, current, th);
-  if(head->data >= number){
+  if(head->data >= th){
     node* temp = head;
     head = head->next;
     delete temp;
