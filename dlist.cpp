@@ -41,7 +41,8 @@ void dlist::display() {
   cout << endl;
 }
 
-void dlist::remove(node* &head, node* current, int th){
+void dlist::remove(node* &head, node* current, int th, int &a){
+  a++;
   cout << current->data << endl;
   if(current->next == NULL){
     if(current->data > th){
@@ -51,12 +52,13 @@ void dlist::remove(node* &head, node* current, int th){
   }
   current = current -> next;
   remove(head, current, th);
+  a--;
   if(current->data >= th){
     cout << "over 5: " << current-> data << endl;
       if(current -> next== NULL){
         cout<< "tail: "  << current-> data <<endl;
       }
-      else if(current -> previous -> data == NULL){
+      else if(a == 1){
         cout<< "head: "  << current-> data <<endl;
       }
       else{
