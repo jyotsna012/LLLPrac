@@ -21,7 +21,8 @@ class dlist
         ~dlist();        //supplied
         void build();   //supplied
         void display(); //supplied
-        void remove(int a, int th);
+        node* getHead();
+        void remove(node* head, int th);
         
 
      /* *****************YOUR TURN! ******************************** */
