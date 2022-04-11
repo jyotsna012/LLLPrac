@@ -23,6 +23,8 @@ class dlist
         void display(); //supplied
         node* getHead();
         void remove(node* current, int newData);
+        void remove2(node* &head, node* current, int th);
+
         
 
      /* *****************YOUR TURN! ******************************** */
