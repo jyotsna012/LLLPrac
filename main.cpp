@@ -10,7 +10,7 @@ int main()
     
     node* head1 = object.getHead();
     node* current = head1;
-    object.remove2(head1, current, 5);
+    object.remove2(current, 5);
 
     //PLEASE PUT YOUR CODE HERE to call the function assigned
 
