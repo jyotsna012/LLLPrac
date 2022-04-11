@@ -22,7 +22,7 @@ class dlist
         void build();   //supplied
         void display(); //supplied
         node* getHead();
-        void remove(node* &head, node* previous, node* current, int number);
+        void remove(node* current, int newData);
         
 
      /* *****************YOUR TURN! ******************************** */
