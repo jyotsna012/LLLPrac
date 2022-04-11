@@ -41,36 +41,49 @@ void dlist::display() {
   cout << endl;
 }
 
-void remove(node* &head, node* previous, node* current, int number)
+void dlist::remove(node* current, int newData)
 {
-  if (head->data == number)
+  if (head->data == newData)
     {
       node* temp = head;
       head = head->next;
       delete temp;
-      remove(head, head, head->next, number);
+      head->previous = NULL;
+      current = head;
+      remove(current, newData);
     }
   else
     {
-      if (current!= NULL)
+      if (current != tail)
 	{
-	  if (current->data == number)
+	  if (current->data == newData)
 	    {
 	      node* temp = current;
-	      previous->next = current->next;
-	      current = previous->next;
+	      node* pre = current->previous;
+	      pre->next = current->next;
+	      current = current->next;
+	      current->previous = pre;
 	      delete temp;
-	      remove(head, previous, current, number);
+	      remove(current, newData);
 	    }
 	  else
 	    {
-	      previous = current;
 	      current = current->next;
-	      remove(head, previous, current, number);
+	      remove(current, newData);
+	    }
+	}
+      else
+	{
+	  if (tail->data == newData)
+	    {
+	      node* temp = current;
+	      node* pre = current->previous;
+	      pre->next = NULL;
+	      tail = pre;
+	      delete temp;
 	    }
 	}
     }
-  
 }
 
 node* dlist::getHead()
