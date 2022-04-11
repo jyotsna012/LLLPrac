@@ -6,7 +6,7 @@ int main()
     dlist object;
     object.build();
     object.display();
-    object.remove(9);
+    object.remove(0,9);
 
     //PLEASE PUT YOUR CODE HERE to call the function assigned
 
