@@ -6,7 +6,7 @@ int main()
     dlist object;
     object.build();
     object.display();
-    head1 = object.getHead();
+    node* head1 = object.getHead();
     node* current = head1;
     object.remove(current,9);
 
