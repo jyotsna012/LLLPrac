@@ -43,7 +43,7 @@ void dlist::display() {
 
 void dlist::remove(node* current, int newData)
 {
-  if (head->data == newData)
+  if (head->data >= newData)
     {
       node* temp = head;
       head = head->next;
@@ -56,7 +56,7 @@ void dlist::remove(node* current, int newData)
     {
       if (current != tail)
 	{
-	  if (current->data == newData)
+	  if (current->data >= newData)
 	    {
 	      node* temp = current;
 	      node* pre = current->previous;
@@ -74,7 +74,7 @@ void dlist::remove(node* current, int newData)
 	}
       else
 	{
-	  if (tail->data == newData)
+	  if (tail->data >= newData)
 	    {
 	      node* temp = current;
 	      node* pre = current->previous;
