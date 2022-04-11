@@ -8,7 +8,7 @@ int main()
     object.display();
     node* head1 = object.getHead();
     node* current = head1;
-    object.remove(current,9);
+    object.remove(current,3);
 
     //PLEASE PUT YOUR CODE HERE to call the function assigned
 
