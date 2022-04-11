@@ -53,6 +53,7 @@ void dlist::remove2(node* current, int th){
         remove2(current, th);
      }
 	if(current != head && current != tail){
+        cout << "none" << endl;
 	current = current -> next;
      	remove2(current, th);
 }
